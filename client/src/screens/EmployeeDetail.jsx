@@ -89,18 +89,21 @@ export default function EmployeeDetail() {
           title={"First name*"}
           value={input.fname}
           name="fname"
+          required={true}
           onChange={handleChange}
         />
         <InputBox
           title={"Last name*"}
           value={input.lname}
           name="lname"
+          required={true}
           onChange={handleChange}
         />
         <InputBox
           title={"Email*"}
           value={input.email}
           name="email"
+          required={true}
           onChange={handleChange}
           Icon={<MdMail size={23} />}
         />
@@ -139,6 +142,7 @@ export default function EmployeeDetail() {
           title={"Department*"}
           value={input.department}
           name="department"
+          required={true}
           onChange={handleChange}
           Icon={<MdMapsHomeWork size={23} />}
         />

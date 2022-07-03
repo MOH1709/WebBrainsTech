@@ -70,7 +70,7 @@ export default function AddEmpolyee() {
 
       navigate("/");
     } catch (error) {
-      alert("please check your internet connection or try again later")
+      alert("please check your internet connection or try again later");
     }
   }
 
@@ -85,18 +85,21 @@ export default function AddEmpolyee() {
           title={"First name*"}
           value={input.fname}
           name="fname"
+          required={true}
           onChange={handleChange}
         />
         <InputBox
           title={"Last name*"}
           value={input.lname}
           name="lname"
+          required={true}
           onChange={handleChange}
         />
         <InputBox
           title={"Email*"}
           value={input.email}
           name="email"
+          required={true}
           onChange={handleChange}
           Icon={<MdMail size={23} />}
         />
@@ -135,6 +138,7 @@ export default function AddEmpolyee() {
           title={"Department*"}
           value={input.department}
           name="department"
+          required={true}
           onChange={handleChange}
           Icon={<MdMapsHomeWork size={23} />}
         />

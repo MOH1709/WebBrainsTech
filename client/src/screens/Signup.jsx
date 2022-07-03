@@ -50,7 +50,11 @@ export default function Signup() {
       }
 
     } catch (error) {
-      alert("please check your internet connection or try again later")
+      if (error.message.split(" ").pop() === "409") {
+        alert("Email already exist");
+      } else {
+        alert("please check your internet connection or try again later")
+      }
     }
   }
 
@@ -77,18 +81,21 @@ export default function Signup() {
           title={"First name"}
           value={input.fname}
           name="fname"
+          required={true}
           onChange={handleChange}
         />
         <InputBox
           title={"Last name"}
           value={input.lname}
           name="lname"
+          required={true}
           onChange={handleChange}
         />
         <InputBox
           title={"Email"}
           value={input.email}
           name="email"
+          required={true}
           onChange={handleChange}
           Icon={<MdMail size={23} />}
         />
@@ -97,6 +104,7 @@ export default function Signup() {
           title={"Password"}
           value={input.password}
           name="password"
+          required={true}
           onChange={handleChange}
           Icon={
             showPass ?

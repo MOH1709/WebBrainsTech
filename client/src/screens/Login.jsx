@@ -48,7 +48,7 @@ export default function Login() {
         navigate("/");
       }
     } catch (error) {
-      alert("please check your internet connection or try again later")
+      alert("please check your internet connection or try again later");
     }
   }
 
@@ -75,12 +75,14 @@ export default function Login() {
           title={"Email"}
           value={input.email}
           name="email"
+          required={true}
           onChange={handleChange}
           Icon={<MdMail size={23} />}
         />
         <InputBox
           type={showPass ? "text" : "password"}
           title={"Password"}
+          required={true}
           value={input.password}
           name="password"
           onChange={handleChange}

@@ -28,7 +28,7 @@ export default function Home() {
 
         setEmployees(response.data?.employees || []);
       } catch (error) {
-        alert("error in getting employes");
+        alert("please check your internet connection or try again later");
       }
     };
 
@@ -50,7 +50,7 @@ export default function Home() {
       Cookies.remove("token");
       window.location.reload();
     } catch (error) {
-      alert("error");
+      alert("please check your internet connection or try again later");
     }
   }
 

@@ -30,7 +30,7 @@ managerSchema.pre("save", async function (next) {
     }
     next();
   } catch (e) {
-    console.log("error in hashing password");
+    next(e)
   }
 });
 
