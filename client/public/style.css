@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baloo Bhaijaan 2", system-ui;
+  -webkit-tap-highlight-color: transparent; /* remove Blue_Screen effect in Mobile */
+}
+
+/* Remove Buttons from number imput */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
