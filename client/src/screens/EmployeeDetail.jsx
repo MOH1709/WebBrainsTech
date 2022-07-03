@@ -74,7 +74,11 @@ export default function EmployeeDetail() {
 
       navigate("/");
     } catch (error) {
-      alert("please check your internet connection or try again later")
+      if (error.message.split(" ").pop() === "409") {
+        alert("Email already exist");
+      } else {
+        alert("please check your internet connection or try again later")
+      }
     }
   }
 
