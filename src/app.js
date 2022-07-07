@@ -19,9 +19,9 @@ app.use(express.json()); // to convert all post request into json format
 app.use("/api/manager", router.manager);
 app.use("/api/employee", verifyAccessToken, router.employee);
 
-app.use("/", verifyAccessToken, (req, res) => {
-  res.send("Mohit");
-})
+// app.use("/", verifyAccessToken, (req, res) => {
+//   res.send("Mohit");
+// })
 
 //-----------------------------------------------> handle error
 app.use((req, res, next) => {
